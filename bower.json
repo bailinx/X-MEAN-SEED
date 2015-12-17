@@ -1,0 +1,21 @@
+{
+  "name": "X-MEAN-SEED",
+  "description": "һ���MEAN��Mongo, Express, Angular, Node����������Ŀ",
+  "main": [],
+  "authors": [
+    "radishj <423261989@qq.com>"
+  ],
+  "license": "MIT",
+  "keywords": [],
+  "homepage": "https://github.com/radishj/X-MEAN-SEED",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.8"
+  }
+}
