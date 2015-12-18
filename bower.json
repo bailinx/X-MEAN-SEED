@@ -1,6 +1,6 @@
 {
   "name": "X-MEAN-SEED",
-  "description": "һ���MEAN��Mongo, Express, Angular, Node����������Ŀ",
+  "description": "一款集成MEAN（Mongo, Express, Angular, Node）的种子项目",
   "main": [],
   "authors": [
     "radishj <423261989@qq.com>"
@@ -16,6 +16,9 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "~1.4.8"
+    "html5-boilerplate": "~5.2.0",
+    "requirejs": "~2.1.22",
+    "angular": "~1.4.8",
+    "angular-route": "~1.4.8"
   }
 }

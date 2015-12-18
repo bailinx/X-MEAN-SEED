@@ -27,7 +27,7 @@ build/Release
 node_modules
 
 # libs
-public/lib
+app/bower_components
 
 # WebStorm
 .idea
