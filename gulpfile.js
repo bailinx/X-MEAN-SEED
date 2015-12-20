@@ -7,11 +7,11 @@ var gulp           = require('gulp'),
     cheerio        = require('gulp-cheerio');
 
 var path = {
-    public   : "app/",
-    css      : "app/css/",
-    js       : "app/js/",
-    less     : "app/less/",
-    img      : "app/img/",
+    public   : "public/",
+    css      : "public/css/",
+    js       : "public/js/",
+    less     : "public/less/",
+    img      : "public/img/",
     dist     : "dist/"
 }, env = {
     production: false
