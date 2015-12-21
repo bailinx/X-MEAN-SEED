@@ -1,15 +1,42 @@
 'use strict';
-var index   = require('./index'),
-    user    = require('./user'),
-    helper  = require('./helper');
+var index = require('./index'),
+	user = require('./user'),
+	express = require('express'),
+	route = express.Router();
 
-var setupRotue = helper.setupRoute;
-module.export = function(app, middleware) {
-    var route = express.Router();
-    mainRoutes(route, middleware, function(req, res){
+module.export = function (app) {
+	app.use('/', index);
+	app.use('/users', user);
 
-    });
+	// catch 404 and forward to error handler
+	app.use(function (req, res, next) {
+		var err = new Error('Not Found');
+		err.status = 404;
+		next(err);
+	});
+
+	// error handlers
+
+	// development error handler
+	// will print stacktrace
+	if (config.env === 'development') {
+		app.use(function (err, req, res, next) {
+			res.status(err.status || 500);
+			res.render('error', {
+				message: err.message,
+				error: err
+			});
+		});
+	}
+
+	// production error handler
+	// no stacktraces leaked to user
+	app.use(function (err, req, res, next) {
+		res.status(err.status || 500);
+		res.render('error', {
+			message: err.message,
+			error: {}
+		});
+	});
 };
-function mainRoutes(app, middleware, controller) {
-    // 公共路由
-}
+

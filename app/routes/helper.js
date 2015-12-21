@@ -10,10 +10,10 @@ var helper = {};
  * @param middlewares
  * @param controller
  */
-helper.setupRoute = function(router, name, middleware, middlewares, controller) {
-    //middlewares = middlewares.concat([middleware.pageView, middleware.pluginHooks]);
+helper.setupRoute = function(router, name, middleware, controller) {
+    // middlewares = middlewares.concat([middleware.pageView, middleware.pluginHooks]);
 
-    router.get(name, middlewares, controller);
+    router.get(name, middleware, controller);
 };
 
 module.exports = helper;

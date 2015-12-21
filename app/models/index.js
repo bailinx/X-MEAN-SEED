@@ -4,7 +4,7 @@
 'use strict';
 var mongoose = require('mongoose'),
     config   = require('../config/config'),
-    logger = require('../utils/log').logger,
+    logger   = require('../utils/log').logger,
     fs       = require('fs');
 
 mongoose.connect(config.connectionString);
