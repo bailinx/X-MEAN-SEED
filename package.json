@@ -13,6 +13,7 @@
     "express": "~4.13.1",
     "hbs": "~3.1.0",
     "less-middleware": "1.0.x",
+    "log4js": "^0.6.29",
     "mongodb": "^2.0.52",
     "mongoose": "^4.3.3",
     "morgan": "~1.6.1",

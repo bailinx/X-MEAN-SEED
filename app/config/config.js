@@ -3,6 +3,7 @@
  */
 'use strict';
 module.exports = {
-    cookieSecret: 'X-MEAN-SEED',
-    connectionString: 'mongodb://localhost/xmean'
+    env                     : 'development',// production: 生产环境 development: 开发环境
+    cookieSecret            : 'X-MEAN-SEED',
+    connectionString        : 'mongodb://localhost/xmean'
 }

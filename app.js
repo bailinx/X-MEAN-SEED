@@ -5,6 +5,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+var config = require('./config/config');
 var routes = require('./app/routes/index');
 var users = require('./app/routes/users');
 
@@ -19,7 +20,7 @@ app.set('view engine', 'hbs');
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
-app.use(cookieParser());
+app.use(cookieParser(config.cookieSecret));
 app.use(require('less-middleware')(path.join(__dirname, 'app')));
 app.use(express.static(path.join(__dirname, 'app')));
 
@@ -37,7 +38,7 @@ app.use(function (req, res, next) {
 
 // development error handler
 // will print stacktrace
-if (app.get('env') === 'development') {
+if (config.env === 'development') {
     app.use(function (err, req, res, next) {
         res.status(err.status || 500);
         res.render('error', {
