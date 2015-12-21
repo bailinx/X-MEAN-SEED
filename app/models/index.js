@@ -18,8 +18,7 @@ db.once('open', function() {
     logger.info('%s has been connected.', config.connectionString);
 });
 
-// 加载Schema
-var models_path = __dirname + '/mapping';
+var models_path = __dirname + '/app/models/mapping';
 fs.readdirSync(models_path).forEach(function(file) {
     // 引入文件
     require(models_path + '/' + file);
