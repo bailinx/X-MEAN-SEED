@@ -1,8 +1,6 @@
-/**
- * Created by radishj on 2015/12/20.
- */
 'use strict';
 module.exports = {
+    name                    : 'X-MEAN-SEED',
     /* production: 生产环境 development: 开发环境 */
     env                     : 'development',
     port                    : 3000,

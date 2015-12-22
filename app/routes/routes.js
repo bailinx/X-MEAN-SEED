@@ -1,12 +1,13 @@
 'use strict';
 var index = require('./index'),
 	user = require('./user'),
+	config = require('../config/config'),
 	express = require('express'),
 	route = express.Router();
 
-module.export = function (app) {
+module.exports = function (app) {
 	app.use('/', index);
-	app.use('/users', user);
+	app.use('/user', user);
 
 	// catch 404 and forward to error handler
 	app.use(function (req, res, next) {

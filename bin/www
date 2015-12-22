@@ -8,6 +8,7 @@ var app = require('../app');
 var debug = require('debug')('X-MEAN:server');
 var http = require('http');
 var config = require('../app/config/config');
+var logger = require('../app/utils/log').logger;
 
 /**
  * Get port from environment and store in Express.
@@ -26,7 +27,9 @@ var server = http.createServer(app);
  * Listen on provided port, on all network interfaces.
  */
 
-server.listen(port);
+server.listen(port, function () {
+    logger.info('X-MEAN-SEED server listening on port %s', port);
+});
 server.on('error', onError);
 server.on('listening', onListening);
 
@@ -66,11 +69,11 @@ function onError(error) {
     // handle specific listen errors with friendly messages
     switch (error.code) {
         case 'EACCES':
-            console.error(bind + ' requires elevated privileges');
+            logger.error(bind + ' requires elevated privileges');
             process.exit(1);
             break;
         case 'EADDRINUSE':
-            console.error(bind + ' is already in use');
+            logger.error(bind + ' is already in use');
             process.exit(1);
             break;
         default:

@@ -12,14 +12,14 @@ log4js.configure({
         {
             // 日期文件格式
             type: 'file',
-            filename: 'log/log.log',
+            filename: '../app/logs/log.log',
             pattern: '_yyyy-MM-dd',
             maxLogSize: 20480,
             backups: 3,
             category: 'dateFileLog'
         }
     ],
-    replaceConlsole: true,
+    replaceConsole: true,
     levels: {
         dateFileLog: 'debug',
         console: 'debug'
