@@ -1,6 +1,3 @@
-/**
- * Created by radishj on 2015/12/20.
- */
 'use strict';
 var mongoose = require('mongoose'),
     crypto = require('crypto'),
@@ -29,4 +26,4 @@ schema.method("authenticate", function(plainText) {
 function encryptPassword(password) {
     return crypto.createHash('md5').update(password).digest('base64');
 }
-mongoose.model('User', schema);
+mongoose.model('user', schema);

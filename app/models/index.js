@@ -1,6 +1,3 @@
-/**
- * Created by radishj on 2015/12/20.
- */
 'use strict';
 var mongoose = require('mongoose'),
     config   = require('../config/config'),
@@ -18,11 +15,11 @@ db.once('open', function() {
     logger.info('%s has been connected.', config.connectionString);
 });
 
-var models_path = __dirname + '/app/models/mapping';
+var models_path = __dirname + '/mapping';
 fs.readdirSync(models_path).forEach(function(file) {
     // 引入文件
     require(models_path + '/' + file);
     // 挂载Schema
-    var modelName = file.replace('Model.js', '');
+    var modelName = file.replace('.js', '');
     exports[modelName] = mongoose.model(modelName);
 });
