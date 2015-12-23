@@ -26,4 +26,4 @@ schema.method("authenticate", function (plainText) {
 function encryptPassword(password) {
 	return crypto.createHash('md5').update(password).digest('base64');
 }
-mongoose.model('user', schema);
+mongoose.model('user', schema, 'user');

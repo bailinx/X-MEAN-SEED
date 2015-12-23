@@ -17,9 +17,9 @@ db.once('open', function () {
 
 var models_path = __dirname + '/mapping';
 fs.readdirSync(models_path).forEach(function (file) {
-	// 引入文件
+	// 寮曞叆鏂囦欢
 	require(models_path + '/' + file);
-	// 挂载Schema
+	// 鎸傝浇Schema
 	var modelName = file.replace('.js', '');
 	exports[modelName] = mongoose.model(modelName);
 });

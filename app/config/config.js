@@ -1,9 +1,9 @@
 'use strict';
 module.exports = {
     name                    : 'X-MEAN-SEED',
-    /* production: Éú²ú»·¾³ development: ¿ª·¢»·¾³ */
+    /* production: ç”Ÿäº§ç¯å¢ƒ development: å¼€å‘ç¯å¢ƒ */
     env                     : 'development',
     port                    : 3000,
-    cookieSecret            : 'X-MEAN-SEED',// cookieÃÜÔ¿
+    cookieSecret            : 'X-MEAN-SEED',// cookieå¯†é’¥
     connectionString        : 'mongodb://localhost/xmean'
 }
