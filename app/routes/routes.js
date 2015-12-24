@@ -6,6 +6,11 @@ var index = require('./index'),
 	route = express.Router();
 
 module.exports = function (app) {
+
+	middleware = require('../middleware/common')(app, middleware);
+	// 设置中间件
+	app.use(middleware.setPowerBy);
+
 	app.use('/', index);
 	app.use('/user', user);
 
