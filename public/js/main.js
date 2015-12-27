@@ -15,7 +15,7 @@ require.config({
 	},
 	deps: ['./bootstrap']
 });
-// 参考 https://github.com/maxdow/angularjs-requirejs-seed/tree/master/app/js
+
 require([
 			'app',
 			'bootstrap',
