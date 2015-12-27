@@ -1,2 +1,2 @@
 'use strict';
-define(['./version'], function (services) {});
+define(['./version'], function () {});
