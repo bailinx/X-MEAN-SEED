@@ -5,12 +5,12 @@ var log4js = require('log4js'),
 log4js.configure({
 	appenders: [
 		{
-			// ¿ØÖÆÌ¨Êä³ö
+			// è¾“å‡ºåˆ°æ§åˆ¶å°
 			type: 'console',
 			category: 'console'
 		},
 		{
-			// ÈÕÆÚÎÄ¼ş¸ñÊ½
+			// è¾“å‡ºåˆ°æ–‡ä»¶
 			type: 'file',
 			filename: '../logs/log.log',
 			pattern: '_yyyy-MM-dd',
@@ -28,7 +28,7 @@ log4js.configure({
 
 var dateFileLog = log4js.getLogger('dateFileLog');
 var consoleLog = log4js.getLogger('console');
-// Ä£Ê½Ñ¡Ôñ
+// Ä£Ê½Ñ¡ï¿½ï¿½
 if (config.env === 'development') {
 	exports.logger = consoleLog;
 } else {

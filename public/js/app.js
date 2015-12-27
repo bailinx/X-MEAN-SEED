@@ -1,12 +1,18 @@
-'use strict';
 define([
 		"angular",
 		'angular-route',
-		'controllers/index',
-		'services/index',
-		'directives/index',
-		'filters/index'
-	], function BaseManager(angular) {
-		return angular.module('app', ['controller', 'directives', 'filters', 'services', 'ngRoute']);
+		'./controllers/index',
+		'./services/index',
+		'./directives/index',
+		'./filters/index'
+	], function (angular) {
+		'use strict';
+		return angular.module('app', [
+			'app.controller',
+			'app.directives',
+			'app.filters',
+			'app.services',
+			'ngRoute'
+		]);
 	}
 );

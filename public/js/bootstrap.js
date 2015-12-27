@@ -1,8 +1,8 @@
 'use strict';
-define(['angular', 'domReady', 'app'],
-	function(angular, domReady) {
+define(['require', 'angular', 'app', 'routes'],
+	function (domcument, ng) {
 		require(['domReady!'], function(document) {
-			angular.bootstrap(document, ['app']);
+			ng.bootstrap(document, ['app']);
 		});
 	}
 );
