@@ -3,7 +3,8 @@ var index = require('./index'),
 	user = require('./user'),
 	config = require('../config/config'),
 	express = require('express'),
-	route = express.Router();
+	route = express.Router(),
+	middleware = {};
 
 module.exports = function (app) {
 

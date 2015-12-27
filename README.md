@@ -4,3 +4,8 @@
 # Notices
 
 项目采用最新版本MEAN构建，目前正在构建中(unfinished)，随时有可能更新..
+
+# 参考下列项目
+
+* AngularJS-RequireJS-Sample-Project
+
