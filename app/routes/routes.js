@@ -8,7 +8,7 @@ var index = require('./index'),
 module.exports = function (app) {
 
 	middleware = require('../middleware/common')(app, middleware);
-	// 设置中间件
+	// 璁剧疆X-Power-By
 	app.use(middleware.setPowerBy);
 
 	app.use('/', index);
