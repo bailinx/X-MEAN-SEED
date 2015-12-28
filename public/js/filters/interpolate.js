@@ -1,4 +1,4 @@
-define(['./module'], function (filters) {
+define(['./filters'], function (filters) {
 	'use strict';
 
 	return filters.filter('interpolate', ['version', function (version) {
