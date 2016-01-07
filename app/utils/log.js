@@ -28,7 +28,7 @@ log4js.configure({
 
 var dateFileLog = log4js.getLogger('dateFileLog');
 var consoleLog = log4js.getLogger('console');
-// ģʽѡ��
+// 当前环境 development 为开发模式
 if (config.env === 'development') {
 	exports.logger = consoleLog;
 } else {
