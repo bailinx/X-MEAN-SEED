@@ -1,8 +1,6 @@
 define(['./controllers'], function (controllers) {
 	'use strict';
-	controllers.controller('IndexCtrl', [function ($scope) {
-		$scope.pop = function () {
-			toaster.pop('success', 'title', 'text');
-		}
+	controllers.controller('IndexCtrl', [function ($scope, toastr) {
+		toastr.success('hello world!', 'X-MEAN-SEED');
 	}]);
 });

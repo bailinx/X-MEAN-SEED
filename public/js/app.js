@@ -1,6 +1,8 @@
 define([
 		"angular",
 		'angular-route',
+		'angular-animate',
+		'angular-toastr',
 		'./controllers/index',
 		'./directives/index',
 		'./filters/index',
@@ -12,7 +14,9 @@ define([
 			'app.directives',
 			'app.filters',
 			'app.services',
-			'ngRoute'
+			'ngRoute',
+			'ngAnimate',
+			'toastr'
 		]);
 	}
 );
