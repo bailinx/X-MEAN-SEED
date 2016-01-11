@@ -1,2 +1,8 @@
 'use strict';
-define(['./version'], function () {});
+define([
+    './notifyService',
+    './version'
+    ], function () {
+
+    }
+);
