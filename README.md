@@ -7,6 +7,7 @@
 
 前端采用Require V2.1.22 + Angular V1.4.8 + Bootstrap V4.0.0-alpha.2
 前端结构
+```
 ├──controllers    // 控制器
 ├──directives     // 指令
 ├──filters        // 过滤器
@@ -15,10 +16,11 @@
 ├──bootstrap.js   // 项目启动
 ├──main.js        // 项目入口以及配置
 ├──routes.js      // 路由
-
+```
 
 后端采用Node V4.2.2 + Express V4.13.1
 后端结构
+```
 ├──api            // api
 ├──config         // 项目配置
 ├──controllers    // 控制器
@@ -28,7 +30,7 @@
 ├──routes         // 路由
 ├──utils          // 第三方插件(目前集成log4js)
 ├──views          // 视图(当前采用hbs模板引擎，后续可能全静态)
-
+```
 # Quick Start
 
 1. 下载最新版本`X-MEAN-SEED`
