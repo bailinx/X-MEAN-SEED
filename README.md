@@ -3,11 +3,44 @@
 
 # Notices
 
-项目采用最新版本MEAN构建，目前正在构建中(unfinished)，随时有可能更新..
+项目整合MEAN，目前框架整合已经完成，正在构建Demo，项目的一些介绍如下：
 
-# 进度
+前端采用Require V2.1.22 + Angular V1.4.8 + Bootstrap V4.0.0-alpha.2
+前端结构
+├──controllers    // 控制器
+├──directives     // 指令
+├──filters        // 过滤器
+├──services       // 服务
+├──app.js         // app(注入上下文)
+├──bootstrap.js   // 项目启动
+├──main.js        // 项目入口以及配置
+├──routes.js      // 路由
+
+
+后端采用Node V4.2.2 + Express V4.13.1
+后端结构
+├──api            // api
+├──config         // 项目配置
+├──controllers    // 控制器
+├──dao            // 要不要Dao值得考量
+├──middleware     // 中间件
+├──models         // 模型
+├──routes         // 路由
+├──utils          // 第三方插件(目前集成log4js)
+├──views          // 视图(当前采用hbs模板引擎，后续可能全静态)
+
+# Quick Start
+
+1. 下载最新版本`X-MEAN-SEED`
+2. 安装node依赖lib`npm install`
+3. 安装前端依赖lib`bower install`
+4. 启动MongoDB
+5. 启动项目`node www`
+
+# Logs
 
 - 前端登陆逻辑完善 进行中
+- 增加组件(ng-toastr/ui-router) 2016/01/11
 - 前端搭建及调试 2015/12/27
 - 后端模块搭建及调试 2015/12/23
 
