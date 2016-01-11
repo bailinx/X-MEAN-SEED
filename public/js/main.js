@@ -2,7 +2,7 @@
 require.config({
 	paths: {
 		'angular': "../libs/angular/angular",
-		'angularRoute': "../libs/angular-route/angular-route",
+		'uiRouter': "../libs/angular-ui-router/release/angular-ui-router",
 		'angularAnimate': "../libs/angular-animate/angular-animate",
 		'angularToastr': "../libs/angular-toastr/dist/angular-toastr.tpls",
 		'domReady': "../libs/requirejs-domready/domReady"
@@ -11,7 +11,7 @@ require.config({
 		'angular': {
 			'exports': 'angular'
 		},
-		'angularRoute': {
+		'uiRouter': {
 			deps: ['angular']
 		},
 		'angularAnimate': {

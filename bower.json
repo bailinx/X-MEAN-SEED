@@ -21,6 +21,7 @@
     "angular": "~1.4.8",
     "angular-route": "~1.4.8",
     "requirejs-domready": "~2.0.1",
-    "angular-toastr": "~1.6.0"
+    "angular-toastr": "~1.6.0",
+    "angular-ui-router": "~0.2.15"
   }
 }

@@ -1,6 +1,6 @@
 define([
 		"angular",
-		'angularRoute',
+		'uiRouter',
 		'angularAnimate',
 		'angularToastr',
 		'./controllers/index',
@@ -16,7 +16,7 @@ define([
 			'app.directives',
 			'app.filters',
 			'app.services',
-			'ngRoute'
+			'ui.router'
 		]);
 	}
 );
