@@ -1,4 +1,4 @@
-define(['./controllers'], function (controllers) {
+define(['./module'], function (controllers) {
 	'use strict';
 	controllers.controller('IndexCtrl', ['$scope' , 'toastr', function ($scope, toastr) {
 		console.log('indexCtrl..');
