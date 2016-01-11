@@ -1,8 +1,8 @@
 define([
 		"angular",
-		'angular-route',
-		'angular-animate',
-		'angular-toastr',
+		'angularRoute',
+		'angularAnimate',
+		'angularToastr',
 		'./controllers/index',
 		'./directives/index',
 		'./filters/index',
@@ -10,13 +10,13 @@ define([
 	], function (ng) {
 		'use strict';
 		return ng.module('app', [
+			'ngAnimate',
+			'toastr',
 			'app.controllers',
 			'app.directives',
 			'app.filters',
 			'app.services',
-			'ngRoute',
-			'ngAnimate',
-			'toastr'
+			'ngRoute'
 		]);
 	}
 );

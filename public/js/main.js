@@ -2,22 +2,22 @@
 require.config({
 	paths: {
 		'angular': "../libs/angular/angular",
-		'angular-route': "../libs/angular-route/angular-route",
-		'angular-animate': "../libs/angular-animate/angular-animate",
-		'angular-toastr': "../libs/angular-toastr/dist/angular-toastr",
+		'angularRoute': "../libs/angular-route/angular-route",
+		'angularAnimate': "../libs/angular-animate/angular-animate",
+		'angularToastr': "../libs/angular-toastr/dist/angular-toastr.tpls",
 		'domReady': "../libs/requirejs-domready/domReady"
 	},
 	shim: {
 		'angular': {
 			'exports': 'angular'
 		},
-		'angular-route': {
+		'angularRoute': {
 			deps: ['angular']
 		},
-		'angular-animate': {
+		'angularAnimate': {
 			deps: ['angular']
 		},
-		'angular-toastr': {
+		'angularToastr': {
 			deps: ['angular']
 		}
 	},

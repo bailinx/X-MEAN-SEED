@@ -21,7 +21,6 @@
     "angular": "~1.4.8",
     "angular-route": "~1.4.8",
     "requirejs-domready": "~2.0.1",
-    "AngularJS-Toaster": "angularjs-toaster#~0.4.181",
     "angular-toastr": "~1.6.0"
   }
 }
