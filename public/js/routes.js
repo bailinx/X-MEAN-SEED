@@ -4,7 +4,7 @@ define(['./app'], function (app) {
 		$stateProvider.state('login', {
 			url: '/login',
 			templateUrl: 'partials/login.html',
-			controller: 'UserCtrl'
+			controller: 'AuthCtrl'
 		})
 		.state('index', {
 			url: '/index',
@@ -13,17 +13,4 @@ define(['./app'], function (app) {
 		});
 		$urlRouterProvider.otherwise('/login');
 	});
-	/*return app.config(['$routeProvider', function ($routeProvider) {
-		$routeProvider.when('/view1', {
-			templateUrl: 'partials/partial1.html',
-			controller: 'UserCtrl'
-		});
-		$routeProvider.when('/view2', {
-			templateUrl: 'partials/partial2.html',
-			controller: 'IndexCtrl'
-		});
-		$routeProvider.otherwise({
-			redirectTo: '/view1'
-		});
-	}]);*/
 });

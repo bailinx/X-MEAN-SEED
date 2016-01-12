@@ -1,4 +1,4 @@
 define([
-	'./userCtrl',
+	'./authCtrl',
 	'./indexCtrl'
 ], function () {});

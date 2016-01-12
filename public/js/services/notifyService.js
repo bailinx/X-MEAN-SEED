@@ -1,11 +1,11 @@
 define(['./module'], function (services) {
     'use strict';
-    services.factory('notifyService', [ '$rootScope', '$log', 'toastr', 'toastrConfig',
+    services.factory('NotifyService', [ '$rootScope', '$log', 'toastr', 'toastrConfig',
         function ($rootScope, $log, toastr, toastrConfig) {
             toastrConfig.positionClass = 'toast-bottom-right';
             toastrConfig.tapToDismiss = 'true';
             var defaults= {
-                // ƒ¨»œ≤Œ ˝
+                // ÈªòËÆ§ÂèÇÊï∞
                 allowHtml: true
             };
             return {

@@ -17,6 +17,22 @@ define([
 			'app.filters',
 			'app.services',
 			'ui.router'
-		]);
+		]).config(function ($httpProvider) {
+			// 在这里构造拦截器
+			var interceptor = function($q) {
+				return {
+					'response': function(resp) {
+						console.log('get data complete:' + resp, 'ajax');
+						return resp;
+					},
+					'responseError': function(rejection) {
+						// 错误处理
+						console.log('get data error:' + rejection, 'ajax');
+						return $q.reject(rejection);
+					}
+				};
+			};
+			$httpProvider.interceptors.push(interceptor);
+		});
 	}
 );

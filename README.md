@@ -6,7 +6,7 @@
 项目整合MEAN，目前框架整合已经完成，正在构建Demo，项目的一些介绍如下：
 
 前端采用Require V2.1.22 + Angular V1.4.8 + Bootstrap V4.0.0-alpha.2
-前端结构
+  前端结构
 ```
 ├──controllers    // 控制器
 ├──directives     // 指令
@@ -19,7 +19,7 @@
 ```
 
 后端采用Node V4.2.2 + Express V4.13.1
-后端结构
+  后端结构
 ```
 ├──api            // api
 ├──config         // 项目配置
