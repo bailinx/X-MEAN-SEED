@@ -3,13 +3,13 @@ define(['./module'], function (services) {
     services.factory('UserService', ['$rootScope', '$http',
         function ($rootScope, $http) {
             return {
-                login: function (credentials) {
+                login: function (credentials, callback) {
                     $http.post('/user/login', credentials)
                         .success(function (data, status) {
-                            return data;
+                            callback(null, data);
                         })
-                        .error(function (data, status, headers, config) {
-                            return false;
+                        .error(function (e) {
+                            callback(e);
                         });
                 }
             };
