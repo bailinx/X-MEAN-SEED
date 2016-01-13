@@ -10,6 +10,11 @@ define(['./app'], function (app) {
 			url: '/index',
 			templateUrl: 'partials/index.html',
 			controller: 'IndexCtrl'
+		})
+		.state('index.index', {
+			url: '/index/index',
+			templateUrl: 'partials/Index/index.html',
+			controller: 'IndexCtrl'
 		});
 		$urlRouterProvider.otherwise('/login');
 	});

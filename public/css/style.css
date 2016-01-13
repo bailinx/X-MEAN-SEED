@@ -1,6 +1,7 @@
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
+/* login form start */
 .form-signin {
   max-width: 330px;
   padding: 15px;
@@ -34,4 +35,8 @@ body {
   margin-bottom: 10px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+}
+/* index */
+.header {
+  margin-top: 5rem;
 }

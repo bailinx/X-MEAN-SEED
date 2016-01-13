@@ -15,7 +15,7 @@ userController.get = function (req, res, next) {
 	res.send('id : ' + req.params.id);
 }
 
-userController.add = function (req, res, next) {
+userController.register = function (req, res, next) {
 	var user = new userModel({
 		username: 'radishj' + Math.floor(Math.random()*100) + '@qq.com',
 		password: '111'
@@ -33,10 +33,9 @@ userController.update = function (req, res, next) {
 	res.send('update');
 }
 
-userController.login = function (req, res, next) {
+userController.login = function (req, res) {
     var encryptPsd = crypto.encryptPassword(req.body.password);
     userModel.findOne({ 'username': req.body.email, 'hash_psd': encryptPsd }, function (err, doc) {
-        console.log(doc == null);
         if( null == doc ) {
             res.json({'result': 'failed'});
         } else {

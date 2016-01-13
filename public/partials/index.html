@@ -1,28 +1,35 @@
-<header>
-  <div class="container">
-    <nav class="navbar navbar-dark bg-inverse ">
-      <a class="navbar-brand" href="#">X-MEAN-SEED</a>
-      <ul class="nav navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" ui-sref="login">首页</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" ui-sref="index">用户列表</a>
-        </li>
-      </ul>
+<header class="header">
+    <nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
+        <div class="container">
+            <a class="navbar-brand" href="#">X-MEAN-SEED</a>
+            <ul class="nav navbar-nav">
+                <li class="nav-item" ui-sref-active="active">
+                    <a class="nav-link" ui-sref="index">首页</a>
+                </li>
+                <li class="nav-item" ui-sref-active="active">
+                    <a class="nav-link" ui-sref="index.index">用户列表</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav pull-xs-right">
+                <li class="nav-item">
+                    <a class="nav-link" ui-sref="login">注销</a>
+                </li>
+            </ul>
+        </div>
     </nav>
-  </div>
 </header>
-<dir>
+<div>
     <p>This is the partial for view 2.</p>
+
     <p>
         Showing of 'interpolate' filter:
         {{ 'Current version is v%VERSION%.' | interpolate }}
     </p>
-</dir>
+</div>
 <footer>
     <div class="col-md-4 col-md-offset-4 text-md-center">
         <p>Angular seed app: v<span app-version></span></p>
+
         <p>&copy 2016 baili All Rights Reserved.</p>
     </div>
 </footer>
