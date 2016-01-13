@@ -27,7 +27,11 @@ define([
 					},
 					'responseError': function(rejection) {
 						// 错误处理
-						console.log('get data error:' + rejection, 'ajax');
+						console.warn('Failed with http', (rejection.message || rejection.status), 'status');
+						if (rejection.status == 403) {
+							console.warn('Forbidden, need login to auth');
+							$location.path('/login');
+						}
 						return $q.reject(rejection);
 					}
 				};

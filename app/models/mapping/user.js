@@ -1,6 +1,6 @@
 'use strict';
 var mongoose = require('mongoose'),
-	crypto = require('crypto'),
+	crypto = require('../../utils/crypto'),
 	Schema = mongoose.Schema;
 
 var schema = new Schema({
@@ -16,14 +16,11 @@ var schema = new Schema({
 });
 
 schema.virtual("password").set(function (password) {
-	this.hash_psd = encryptPassword(password);
+	this.hash_psd = crypto.encryptPassword(password);
 });
 
 schema.method("authenticate", function (plainText) {
-	return encryptPassword(plainText) === this.hash_psd;
+	return crypto.encryptPassword(plainText) === this.hash_psd;
 });
 
-function encryptPassword(password) {
-	return crypto.createHash('md5').update(password).digest('base64');
-}
 mongoose.model('user', schema, 'user');
