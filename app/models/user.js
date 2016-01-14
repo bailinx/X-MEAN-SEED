@@ -1,5 +1,5 @@
 'use strict';
-var userModel = require('../models/index').user,
+var userModel = require('../models/mapping').user,
 	logger = require('../utils/log').logger;
 
 var userDao = function (user) {
