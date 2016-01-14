@@ -3,9 +3,9 @@
 
 # Notices
 
-项目整合MEAN，目前框架整合已经完成，Demo亦已完成，一些介绍如下：
+项目整合MEAN，目前框架和Demo均已完成，下面是一些介绍如下：
 
-前端采用Require V2.1.22 + Angular V1.4.8 + Bootstrap V4.0.0-alpha.2
+前端采用Require V2.1.X + Angular V1.4.X + Bootstrap V4.0.0-alpha.2
 
 前端结构
 
@@ -20,7 +20,7 @@
 ├──routes.js      // 路由
 ```
 
-后端采用Node V4.2.2 + Express V4.13.1
+后端采用Node V4.X + Express V4.X
 
 后端结构
 
@@ -28,7 +28,6 @@
 ├──api            // api
 ├──config         // 项目配置
 ├──controllers    // 控制器
-├x-dao            // 已经整合到model中(没必要再分一层)
 ├──middleware     // 中间件
 ├──models         // 模型
 ├──routes         // 路由
@@ -45,7 +44,7 @@
 
 # Logs
 
-## X-MEAN-SEED V1.0.0
+**X-MEAN-SEED V1.0.0**
 - 前端登陆逻辑完善 2016/01/14
 - 整合Dao至Model，优化后端结构 2016/01/14
 - 增加组件(ng-toastr/ui-router) 2016/01/11
@@ -57,7 +56,7 @@
 1.[X-QUESTION](https://github.com/radishj/X-Zone/tree/master/40_node/03_X-QUESTION)
 ![](https://github.com/radishj/X-Zone/blob/master/40_node/03_X-QUESTION/public/img/demo2.gif?raw=true)
 
-# 参考下列项目
+# Reference
 
 * [startersquad.com](https://github.com/StarterSquad/startersquad.com "startersquad.com")
 * [NodeBB](https://github.com/NodeBB/NodeBB)
