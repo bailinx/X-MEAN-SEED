@@ -1,7 +1,7 @@
 define(['./module'], function (controllers) {
 	'use strict';
-	controllers.controller('AuthCtrl', ['$scope', '$rootScope', '$location', 'NotifyService', 'UserService',
-		function ($scope, $rootScope, $location, notify, userService) {
+	controllers.controller('AuthCtrl', ['$scope', '$rootScope', '$state', 'NotifyService', 'UserService',
+		function ($scope, $rootScope, $state, notify, userService) {
 			$scope.credentials = {
 				email: '',
 				password: ''
@@ -13,8 +13,8 @@ define(['./module'], function (controllers) {
 					userService.login(credentials, function (error, data) {
 						if( !error ) {
 							if( data && data.result === 'success' ) {
-								// 缓存用户信息
-								$location.path('/index');
+								// 缓存用户信息并跳转至首页
+								$state.go('sys.index');
 							} else {
 								notify.error('用户名或密码错误.', 'X-MEAN-SEED');
 							}

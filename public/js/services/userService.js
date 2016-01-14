@@ -11,6 +11,15 @@ define(['./module'], function (services) {
                         .error(function (e) {
                             callback(e);
                         });
+                },
+                getAll: function (callback) {
+                    $http.get('/user/list')
+                        .success(function (data, status) {
+                            callback(null, data);
+                        })
+                        .error(function (e) {
+                            callback(e);
+                        })
                 }
             };
         }

@@ -6,15 +6,19 @@ define(['./app'], function (app) {
 			templateUrl: 'partials/login.html',
 			controller: 'AuthCtrl'
 		})
-		.state('index', {
-			url: '/index',
-			templateUrl: 'partials/index.html',
-			controller: 'IndexCtrl'
+		.state('sys', {
+			url: '/sys',
+			templateUrl: 'partials/Templates/layout.html'
 		})
-		.state('index.index', {
-			url: '/index/index',
+		.state('sys.index', {
+			url: '/index',
 			templateUrl: 'partials/Index/index.html',
-			controller: 'IndexCtrl'
+            controller: 'IndexCtrl'
+		})
+		.state('sys.userList', {
+			url: '/userList',
+			templateUrl: 'partials/User/list.html',
+            controller: 'UserCtrl'
 		});
 		$urlRouterProvider.otherwise('/login');
 	});
