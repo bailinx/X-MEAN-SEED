@@ -1,11 +1,10 @@
 'use strict';
 var userController = {},
-	userDao = require('../dao/user'),
-	userModel = require('../models/index').user,
+	userModel = require('../models/user'),
     crypto = require('../utils/crypto');
 
 userController.list = function (req, res, next) {
-	userDao.list(function (err, data) {
+	userModel.getAll(function (err, data) {
 		res.json(data);
 	});
 	// res.send('respond with a resource');
@@ -20,7 +19,7 @@ userController.register = function (req, res, next) {
 		username: 'radishj' + Math.floor(Math.random()*100) + '@qq.com',
 		password: '111'
 	});
-	user.save(function (data) {
+	user.create(function (err, data) {
 		res.send(user);
 	});
 }
@@ -35,7 +34,7 @@ userController.update = function (req, res, next) {
 
 userController.login = function (req, res) {
     var encryptPsd = crypto.encryptPassword(req.body.password);
-    userModel.findOne({ 'username': req.body.email, 'hash_psd': encryptPsd }, function (err, doc) {
+    userModel.getSingle({ 'username': req.body.email, 'hash_psd': encryptPsd }, function (err, doc) {
         if( null == doc ) {
             res.json({'result': 'failed'});
         } else {

@@ -6,7 +6,9 @@
 项目整合MEAN，目前框架整合已经完成，正在构建Demo，项目的一些介绍如下：
 
 前端采用Require V2.1.22 + Angular V1.4.8 + Bootstrap V4.0.0-alpha.2
-  前端结构
+
+前端结构
+
 ```
 ├──controllers    // 控制器
 ├──directives     // 指令
@@ -19,12 +21,14 @@
 ```
 
 后端采用Node V4.2.2 + Express V4.13.1
-  后端结构
+
+后端结构
+
 ```
 ├──api            // api
 ├──config         // 项目配置
 ├──controllers    // 控制器
-├──dao            // 要不要Dao值得考量
+├x-dao            // 已经整合到model中(没必要再分一层)
 ├──middleware     // 中间件
 ├──models         // 模型
 ├──routes         // 路由
@@ -42,6 +46,7 @@
 # Logs
 
 - 前端登陆逻辑完善 进行中
+- 整合Dao至Model，优化后端结构 2016/01/14
 - 增加组件(ng-toastr/ui-router) 2016/01/11
 - 前端搭建及调试 2015/12/27
 - 后端模块搭建及调试 2015/12/23
