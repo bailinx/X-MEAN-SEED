@@ -1,9 +1,9 @@
 'use strict';
 var base = require('./base'),
-	userEntity = require('./mapping').user,
+	user = require('./mapping').user,
 	logger = require('../utils/log').logger;
 
-var userModel = new base (userEntity);
+var userModel = new base( user );
 
 // 扩展方法
 

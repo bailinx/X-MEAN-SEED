@@ -23,4 +23,5 @@ schema.method("authenticate", function (plainText) {
 	return crypto.encryptPassword(plainText) === this.hash_psd;
 });
 
-mongoose.model('user', schema, 'user');
+// users collection
+mongoose.model('user', schema);
