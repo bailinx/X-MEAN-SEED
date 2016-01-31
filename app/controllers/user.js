@@ -1,10 +1,10 @@
 'use strict';
 var userController = {},
-	userModel = require('../models/user'),
+	userModel = require('../models/mapping').user,
     crypto = require('../utils/crypto');
 
 userController.list = function (req, res, next) {
-	userModel.getAll(function (err, data) {
+	userModel.find({}, function (err, data) {
 		res.json(data);
 	});
 	// res.send('respond with a resource');
@@ -15,12 +15,12 @@ userController.get = function (req, res, next) {
 }
 
 userController.register = function (req, res, next) {
-	var user = new userModel({
+	var user = {
 		username: 'radishj' + Math.floor(Math.random()*100) + '@qq.com',
 		password: '111'
-	});
-	user.create(function (err, data) {
-		res.send(user);
+	};
+	user.create(user, function (err, data) {
+		res.send(data);
 	});
 }
 
@@ -34,7 +34,7 @@ userController.update = function (req, res, next) {
 
 userController.login = function (req, res) {
     var encryptPsd = crypto.encryptPassword(req.body.password);
-    userModel.getSingle({ 'username': req.body.email, 'hash_psd': encryptPsd }, function (err, doc) {
+    userModel.findOne({ 'username': req.body.email, 'hash_psd': encryptPsd }, function (err, doc) {
         if( null == doc ) {
             res.json({'result': 'failed'});
         } else {

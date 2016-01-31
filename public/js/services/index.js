@@ -2,7 +2,6 @@
 define([
     './notifyService',
     './userService',
-    './version'
     ], function () {
 
     }

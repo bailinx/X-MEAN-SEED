@@ -44,6 +44,13 @@
 
 # Logs
 
+**X-MEAN-SEED V1.0.1**
+- 去除models下base辅助方法
+- （base.js实际上封装mongoose，但又未继承mongoose，极大限制了mongodb操作灵活性，在[node-angular-lottery](https://github.com/radishj/node-angular-lottery)中已验证）
+- 去除services下version
+- 增加logs文件夹(不然启动时log4js会异常)
+- bootstrap4未稳定，实际使用请修改app/views/layouts下bootstrap.css即可，项目中并未引用angular-bootstrap
+
 **X-MEAN-SEED V1.0.0**
 - 前端登陆逻辑完善 2016/01/14
 - 整合Dao至Model，优化后端结构 2016/01/14
@@ -55,6 +62,9 @@
 
 1.[X-QUESTION](https://github.com/radishj/X-Zone/tree/master/40_node/03_X-QUESTION)
 ![](https://github.com/radishj/X-Zone/blob/master/40_node/03_X-QUESTION/public/img/demo2.gif?raw=true)
+
+2.[node-angular-lottery](https://github.com/radishj/node-angular-lottery)
+![](https://github.com/radishj/node-angular-lottery/blob/master/public/upload/demo.gif?raw=true)
 
 # Reference
 

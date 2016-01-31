@@ -1,8 +1,8 @@
 define(['./module'], function (directives) {
 	'use strict';
-	directives.directive('appVersion', ['version', function (version) {
+	directives.directive('appVersion', [function () {
 		return function (scope, elm) {
-			elm.text(version);
+			elm.text("1.0.1");
 		};
 	}]);
 });
