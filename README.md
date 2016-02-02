@@ -5,7 +5,7 @@
 
 项目整合MEAN，目前框架和Demo均已完成，下面是一些介绍如下：
 
-前端采用Require V2.1.X + Angular V1.4.X + Bootstrap V4.0.0-alpha.2
+前端采用Require V2.1.X + Angular V1.4.X + Bootstrap
 
 前端结构
 
