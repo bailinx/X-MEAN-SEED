@@ -19,7 +19,7 @@ define([
 			'ui.router'
 		]).config(function ($httpProvider) {
 			// 在这里构造拦截器
-			var interceptor = function($q) {
+			var interceptor = ['$q', function($q) {
 				return {
 					'response': function(resp) {
 						console.log('get data complete:' + resp, 'ajax');
@@ -35,7 +35,7 @@ define([
 						return $q.reject(rejection);
 					}
 				};
-			};
+			}];
 			$httpProvider.interceptors.push(interceptor);
 		});
 	}

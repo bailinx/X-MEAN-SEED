@@ -3,6 +3,6 @@ var express = require('express'),
 	idxController = require('../controllers/index');
 
 /* GET home page. */
-router.get('/', idxController.index);
+router.get('/index', idxController.index);
 
 module.exports = router;

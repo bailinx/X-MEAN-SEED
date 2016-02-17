@@ -5,7 +5,7 @@
 
 项目整合MEAN，目前框架和Demo均已完成，下面是一些介绍如下：
 
-前端采用Require V2.1.X + Angular V1.4.X + Bootstrap V4.0.0-alpha.2
+前端采用Require V2.1.X + Angular V1.4.X + Bootstrap
 
 前端结构
 
@@ -32,7 +32,7 @@
 ├──models         // 模型
 ├──routes         // 路由
 ├──utils          // 第三方插件(目前集成log4js)
-├──views          // 视图(当前采用hbs模板引擎，后续可能全静态)
+├──views          // 视图(未依赖views,已静态化)
 ```
 # Quick Start
 
@@ -45,29 +45,26 @@
 # Logs
 
 **X-MEAN-SEED V1.0.1**
-- 去除models下base辅助方法
-- （base.js实际上封装mongoose，但又未继承mongoose，极大限制了mongodb操作灵活性，在[node-angular-lottery](https://github.com/radishj/node-angular-lottery)中已验证）
-- 去除services下version
-- 增加logs文件夹(不然启动时log4js会异常)
-- bootstrap4未稳定，实际使用请修改app/views/layouts下bootstrap.css即可，项目中并未引用angular-bootstrap
+1.去除models下base辅助方法
+2.去除services下version
+3.增加logs文件夹(不然启动时log4js会异常)
+4.bootstrap4未稳定，实际使用请修改app/views/layouts下bootstrap.css即可，项目中并未引用angular-bootstrap
 
 **X-MEAN-SEED V1.0.0**
-- 前端登陆逻辑完善 2016/01/14
-- 整合Dao至Model，优化后端结构 2016/01/14
-- 增加组件(ng-toastr/ui-router) 2016/01/11
-- 前端搭建及调试 2015/12/27
-- 后端模块搭建及调试 2015/12/23
+1.前端登陆逻辑完善 2016/01/14
+2.整合Dao至Model，优化后端结构 2016/01/14
+3.增加组件(ng-toastr/ui-router) 2016/01/11
+4.前端搭建及调试 2015/12/27
+5.后端模块搭建及调试 2015/12/23
 
 # Demo
 
 1.[X-QUESTION](https://github.com/radishj/X-Zone/tree/master/40_node/03_X-QUESTION)
-![](https://github.com/radishj/X-Zone/blob/master/40_node/03_X-QUESTION/public/img/demo2.gif?raw=true)
-
 2.[node-angular-lottery](https://github.com/radishj/node-angular-lottery)
-![](https://github.com/radishj/node-angular-lottery/blob/master/public/upload/demo.gif?raw=true)
 
 # Reference
 
 * [startersquad.com](https://github.com/StarterSquad/startersquad.com "startersquad.com")
 * [NodeBB](https://github.com/NodeBB/NodeBB)
 * [NJBlog](https://github.com/mz121star/NJBlog)
+* [Nodeclub](https://github.com/cnodejs/nodeclub)
