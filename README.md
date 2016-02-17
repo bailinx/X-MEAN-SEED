@@ -32,7 +32,7 @@
 ├──models         // 模型
 ├──routes         // 路由
 ├──utils          // 第三方插件(目前集成log4js)
-├──views          // 视图(当前采用hbs模板引擎，后续可能全静态)
+├──views          // 视图(未依赖views,已静态化)
 ```
 # Quick Start
 
@@ -67,3 +67,4 @@
 * [startersquad.com](https://github.com/StarterSquad/startersquad.com "startersquad.com")
 * [NodeBB](https://github.com/NodeBB/NodeBB)
 * [NJBlog](https://github.com/mz121star/NJBlog)
+* [Nodeclub](https://github.com/cnodejs/nodeclub)
