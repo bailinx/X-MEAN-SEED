@@ -45,22 +45,24 @@
 # Logs
 
 **X-MEAN-SEED V1.0.1**
-1.去除models下base辅助方法
-2.去除services下version
-3.增加logs文件夹(不然启动时log4js会异常)
-4.bootstrap4未稳定，实际使用请修改app/views/layouts下bootstrap.css即可，项目中并未引用angular-bootstrap
+
+1. 去除models下base辅助方法
+2. 去除services下version
+3. 增加logs文件夹(不然启动时log4js会异常)
+4. bootstrap4未稳定，实际使用请修改app/views/layouts下bootstrap.css即可，项目中并未引用angular-bootstrap
 
 **X-MEAN-SEED V1.0.0**
-1.前端登陆逻辑完善 2016/01/14
-2.整合Dao至Model，优化后端结构 2016/01/14
-3.增加组件(ng-toastr/ui-router) 2016/01/11
-4.前端搭建及调试 2015/12/27
-5.后端模块搭建及调试 2015/12/23
+
+1. 前端登陆逻辑完善 2016/01/14
+2. 整合Dao至Model，优化后端结构 2016/01/14
+3. 增加组件(ng-toastr/ui-router) 2016/01/11
+4. 前端搭建及调试 2015/12/27
+5. 后端模块搭建及调试 2015/12/23
 
 # Demo
 
-1.[X-QUESTION](https://github.com/radishj/X-Zone/tree/master/40_node/03_X-QUESTION)
-2.[node-angular-lottery](https://github.com/radishj/node-angular-lottery)
+1. [X-QUESTION](https://github.com/radishj/X-Zone/tree/master/40_node/03_X-QUESTION)
+2. [node-angular-lottery](https://github.com/radishj/node-angular-lottery)
 
 # Reference
 
@@ -68,3 +70,4 @@
 * [NodeBB](https://github.com/NodeBB/NodeBB)
 * [NJBlog](https://github.com/mz121star/NJBlog)
 * [Nodeclub](https://github.com/cnodejs/nodeclub)
+* [jsgen](https://github.com/zensh/jsgen)
