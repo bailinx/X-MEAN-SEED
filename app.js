@@ -20,7 +20,12 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser(config.cookieSecret));
-app.use(express.static(path.join(__dirname, 'public')));
+
+if(config.env === "development") {
+    app.use(express.static(path.join(__dirname, 'public')));
+} else {
+    app.use(express.static(path.join(__dirname, 'dist')));
+}
 
 routes(app);
 

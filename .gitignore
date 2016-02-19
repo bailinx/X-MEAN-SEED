@@ -30,3 +30,6 @@ public/libs
 
 # WebStorm
 .idea
+
+# dist
+dist

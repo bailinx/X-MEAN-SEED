@@ -17,7 +17,7 @@ define([
 			'app.filters',
 			'app.services',
 			'ui.router'
-		]).config(function ($httpProvider) {
+		]).config(['$httpProvider', function ($httpProvider) {
 			// 在这里构造拦截器
 			var interceptor = ['$q', function($q) {
 				return {
@@ -37,6 +37,6 @@ define([
 				};
 			}];
 			$httpProvider.interceptors.push(interceptor);
-		});
+		}]);
 	}
 );
